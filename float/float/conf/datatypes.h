@@ -29,6 +29,18 @@ typedef enum {
 	INPUTTILT_PPM
 } FLOAT_INPUTTILT_REMOTE_TYPE;
 
+typedef enum {
+	LED_OFF = 0,
+	LED_WHITE,
+	LED_RED,
+	LED_GREEN,
+	LED_BLUE,
+	LED_YELLOW,
+	LED_TEAL,
+	LED_PURPLE
+} FLOAT_LED_COLOR_TYPE;
+
+
 typedef struct {
 	float float_version;
 	float float_disable;
@@ -119,6 +131,15 @@ typedef struct {
 	int turntilt_yaw_aggregate;
 	float dark_pitch_offset;
 	bool is_buzzer_enabled;
+	bool is_led_enabled;
+	bool is_led_on;
+	uint16_t num_led_front;
+	uint16_t num_led_back;
+	FLOAT_LED_COLOR_TYPE led_fwd_color;
+	FLOAT_LED_COLOR_TYPE led_back_color;
+	FLOAT_LED_COLOR_TYPE led_charge_color;
+	FLOAT_LED_COLOR_TYPE led_background_color;
+	bool is_rg_swapped;
 } float_config;
 
 // DATATYPES_H_

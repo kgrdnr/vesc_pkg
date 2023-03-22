@@ -97,6 +97,15 @@ int32_t confparser_serialize_float_config(uint8_t *buffer, const float_config *c
 	buffer_append_float16(buffer, conf->dark_pitch_offset, 10, &ind);
 	buffer[ind++] = conf->is_buzzer_enabled;
 	buffer[ind++] = conf->float_disable;
+	buffer[ind++] = conf->is_led_enabled;
+	buffer[ind++] = conf->is_led_on;
+	buffer[ind++] = conf->is_rg_swapped;
+	buffer_append_uint16(buffer, conf->num_led_front, &ind);
+	buffer_append_uint16(buffer, conf->num_led_back, &ind);
+	buffer[ind++] = conf->led_fwd_color;
+	buffer[ind++] = conf->led_back_color;
+	buffer[ind++] = conf->led_charge_color;
+	buffer[ind++] = conf->led_background_color;
 	buffer_append_float16(buffer, conf->float_version, 1000, &ind);
 
 	return ind;
@@ -197,6 +206,15 @@ bool confparser_deserialize_float_config(const uint8_t *buffer, float_config *co
 	conf->dark_pitch_offset = buffer_get_float16(buffer, 10, &ind);
 	conf->is_buzzer_enabled = buffer[ind++];
 	conf->float_disable = buffer[ind++];
+	conf->is_led_enabled = buffer[ind++];
+	conf->is_led_on = buffer[ind++];
+	conf->is_rg_swapped = buffer[ind++];
+	conf->num_led_front = buffer_get_uint16(buffer, &ind);
+	conf->num_led_back = buffer_get_uint16(buffer, &ind);
+	conf->led_fwd_color = buffer[ind++];
+	conf->led_back_color = buffer[ind++];
+	conf->led_charge_color = buffer[ind++];
+	conf->led_background_color = buffer[ind++];
 	conf->float_version = buffer_get_float16(buffer, 1000, &ind);
 
 	return true;
@@ -290,6 +308,15 @@ void confparser_set_defaults_float_config(float_config *conf) {
 	conf->dark_pitch_offset = APPCONF_FLOAT_DARK_PITCH_OFFSET;
 	conf->is_buzzer_enabled = APPCONF_FLOAT_IS_BUZZER_ENABLED;
 	conf->float_disable = APPCONF_FLOAT_DISABLE;
+	conf->is_led_enabled = APPCONF_FLOAT_IS_LED_ENABLED;
+	conf->is_led_on = APPCONF_FLOAT_IS_LED_ON;
+	conf->is_rg_swapped = APPCONF_FLOAT_IS_RG_SWAPPED;
+	conf->num_led_front = APPCONF_FLOAT_NUM_LED_FRONT;
+	conf->num_led_back = APPCONF_FLOAT_NUM_LED_BACK;
+	conf->led_fwd_color = APPCONF_FLOAT_FORWARD_COLOR;
+	conf->led_back_color = APPCONF_FLOAT_BACKWARD_COLOR;
+	conf->led_charge_color = APPCONF_FLOAT_CHARGE_COLOR;
+	conf->led_background_color = APPCONF_FLOAT_BACKGROUND_COLOR;
 	conf->float_version = APPCONF_FLOAT_VERSION;
 }
 

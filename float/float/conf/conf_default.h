@@ -438,6 +438,51 @@
 #define APPCONF_FLOAT_DISABLE 0
 #endif
 
+// Enable LED on Servo/PPM
+#ifndef APPCONF_FLOAT_IS_LED_ENABLED
+#define APPCONF_FLOAT_IS_LED_ENABLED 0
+#endif
+
+// Turn On LEDs
+#ifndef APPCONF_FLOAT_IS_LED_ON
+#define APPCONF_FLOAT_IS_LED_ON 0
+#endif
+
+// Swap Red and Green
+#ifndef APPCONF_FLOAT_IS_RG_SWAPPED
+#define APPCONF_FLOAT_IS_RG_SWAPPED 0
+#endif
+
+// Number of Front LEDs
+#ifndef APPCONF_FLOAT_NUM_LED_FRONT
+#define APPCONF_FLOAT_NUM_LED_FRONT 10
+#endif
+
+// Number of back LEDs
+#ifndef APPCONF_FLOAT_NUM_LED_BACK
+#define APPCONF_FLOAT_NUM_LED_BACK 10
+#endif
+
+// LED forward color
+#ifndef APPCONF_FLOAT_FORWARD_COLOR
+#define APPCONF_FLOAT_FORWARD_COLOR 1
+#endif
+
+// LED backward color
+#ifndef APPCONF_FLOAT_BACKWARD_COLOR
+#define APPCONF_FLOAT_BACKWARD_COLOR 2
+#endif
+
+// LED charge color
+#ifndef APPCONF_FLOAT_CHARGE_COLOR
+#define APPCONF_FLOAT_CHARGE_COLOR 3
+#endif
+
+// LED background color
+#ifndef APPCONF_FLOAT_BACKGROUND_COLOR
+#define APPCONF_FLOAT_BACKGROUND_COLOR 2
+#endif
+
 // Package Version
 #ifndef APPCONF_FLOAT_VERSION
 #define APPCONF_FLOAT_VERSION 0.9

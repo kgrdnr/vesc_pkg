@@ -2032,6 +2032,28 @@ static float app_float_get_debug(int index) {
 			return d->integral2;
 		case(17):
 			return 0;
+		case(18):
+			return d->float_conf.is_led_enabled;
+		case (19):
+			return d->float_conf.is_led_on;
+		case (20):
+			return d->float_conf.num_led_front;
+		case (21): 
+			return d->float_conf.num_led_back;
+		case (22):
+			return d->float_conf.led_fwd_color;
+		case (23):
+			return d->float_conf.led_back_color;
+		case (24):
+			return d->float_conf.led_charge_color;
+		case (25):
+			return d->float_conf.led_background_color;
+		case (26):
+			return d->switch_state;
+		case (27):
+			return d->erpm > 0.0f;
+		case (28):
+			return d->float_conf.is_rg_swapped;
 		default:
 			return 0;
 	}
