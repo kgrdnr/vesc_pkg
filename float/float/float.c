@@ -2254,11 +2254,13 @@ static float app_float_get_debug(int index) {
 		case (26):
 			return d->switch_state;
 		case (27):
-			return d->erpm > 0.0f;
+			return d->erpm > -200.0f;
 		case (28):
 			return d->float_conf.is_rg_swapped;
 		case(29):
 			return d->float_conf.is_led_rgbw;
+		case(30):
+			return d->float_conf.led_brightness;
 
 		default:
 			return 0;

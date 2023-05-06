@@ -146,6 +146,7 @@ typedef struct {
 	bool is_led_rgbw;
 	uint16_t num_led_front;
 	uint16_t num_led_back;
+	uint16_t led_brightness;
 	FLOAT_LED_COLOR_TYPE led_fwd_color;
 	FLOAT_LED_COLOR_TYPE led_back_color;
 	FLOAT_LED_COLOR_TYPE led_charge_color;

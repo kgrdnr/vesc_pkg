@@ -7,7 +7,7 @@
 ;(def led-num 44)
 (define led-num (+ (ext-float-dbg 20) (ext-float-dbg 21)))
 (define is-rgswapped (ext-float-dbg 28))
-(def colors '(0x00000000i32 0xFFFFFFFFi32 0x00FF0000i32 0x0000FF00i32 0x000000FFi32 0x007F7F00i32 0x00007F7Fi32 0x004F00FFi32))
+(def colors '(0x00000000i32 0xFFFFFFFFi32 0x00FF0000i32 0x0000FF00i32 0x000000FFi32 0x007F7F00i32 0x00007F7Fi32 0x004F00FFi32 0x00FF1D00i32))
 (define leds-enabled (ext-float-dbg 18))
 (define is-rgbw (ext-float-dbg 29))
 
@@ -45,30 +45,42 @@
             (define led-background-color (ext-float-dbg 25))
             (define switch-state (ext-float-dbg 26))
             (define forward-movement (ext-float-dbg 27))
+            (define led-brightness (ext-float-dbg 30))
             
             (if (= leds-enabled 1)
             (if (= led-on 1)    
                 (if (> switch-state 0)
-                    (if (= forward-movement 1)
+                    (progn
+                        (ext-ws2812-set-brightness led-brightness)
+                        (if (= forward-movement 1)
+                            (if (< i num-led-front)
+                                (ext-ws2812-set-color i (ix colors led-fwd-color))
+                                (ext-ws2812-set-color i (ix colors led-back-color))
+                                ; (ext-ws2812-set-color i 0)
+                            )
                         (if (< i num-led-front)
-                            (ext-ws2812-set-color i (ix colors led-fwd-color))
                             (ext-ws2812-set-color i (ix colors led-back-color))
+                            (ext-ws2812-set-color i (ix colors led-fwd-color))
                             ; (ext-ws2812-set-color i 0)
                         )
-                        (if (< i num-led-front)
-                            (ext-ws2812-set-color i (ix colors led-back-color))
-                            (ext-ws2812-set-color i (ix colors led-fwd-color))
-                            ; (ext-ws2812-set-color i 0)
-                        )
-                        
+                       )
                         
                     )
-            
-                    (if (< i (* num-led-front (get-batt)))
-                        (ext-ws2812-set-color i (ix colors led-charge-color))
-                        (ext-ws2812-set-color i (ix colors led-background-color))
-                        ; (ext-ws2812-set-color i 0)
-                    )    
+                    (progn
+                        (ext-ws2812-set-brightness 10)
+                        (if (< i (* num-led-front (get-batt)))
+                            (ext-ws2812-set-color i (ix colors led-charge-color))
+                            (ext-ws2812-set-color i (ix colors led-background-color))
+                            )
+                            
+                        
+                        (if (> i num-led-front)   
+                            (ext-ws2812-set-color i (ix colors led-back-color))
+                            ; (ext-ws2812-set-color i 0)
+                      
+                        ) 
+                    ) 
+                      
                 )
                 (ext-ws2812-set-color i 0)
             )    

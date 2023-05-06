@@ -2236,6 +2236,26 @@ p, li { white-space: pre-wrap; }
             <suffix></suffix>
             <vTx>3</vTx>
         </num_led_back>
+        <led_brightness>
+            <longName>LED Brightness</longName>
+            <type>2</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED Brightness&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_LED_BRIGHTNESS</cDefine>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxInt>100</maxInt>
+            <minInt>1</minInt>
+            <showDisplay>0</showDisplay>
+            <stepInt>1</stepInt>
+            <valInt>100</valInt>
+            <suffix></suffix>
+            <vTx>3</vTx>
+        </led_brightness>
         <led_fwd_color>
             <longName>LED forward color</longName>
             <type>4</type>
@@ -2246,7 +2266,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color in direction of travel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_FLOAT_FORWARD_COLOR</cDefine>
-            <valInt>1</valInt>
+            <valInt>8</valInt>
             <enumNames>Off</enumNames>
             <enumNames>White</enumNames>
             <enumNames>Red</enumNames>
@@ -2255,6 +2275,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Yellow</enumNames>
             <enumNames>Cyan</enumNames>
             <enumNames>Purple</enumNames>
+            <enumNames>Orange</enumNames>
         </led_fwd_color>
         <led_back_color>
             <longName>LED backward color</longName>
@@ -2266,7 +2287,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color of tail&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_FLOAT_BACKWARD_COLOR</cDefine>
-            <valInt>2</valInt>
+            <valInt>8</valInt>
             <enumNames>Off</enumNames>
             <enumNames>White</enumNames>
             <enumNames>Red</enumNames>
@@ -2275,6 +2296,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Yellow</enumNames>
             <enumNames>Cyan</enumNames>
             <enumNames>Purple</enumNames>
+            <enumNames>Orange</enumNames>
         </led_back_color>
         <led_charge_color>
             <longName>LED charge color</longName>
@@ -2286,7 +2308,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color for amount of battery remaining. Displayed when board is stopped.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_FLOAT_CHARGE_COLOR</cDefine>
-            <valInt>3</valInt>
+            <valInt>8</valInt>
             <enumNames>Off</enumNames>
             <enumNames>White</enumNames>
             <enumNames>Red</enumNames>
@@ -2295,6 +2317,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Yellow</enumNames>
             <enumNames>Cyan</enumNames>
             <enumNames>Purple</enumNames>
+            <enumNames>Orange</enumNames>
         </led_charge_color>
         <led_background_color>
             <longName>LED background color</longName>
@@ -2306,15 +2329,16 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color for background. Displayed when board is stopped.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_FLOAT_BACKGROUND_COLOR</cDefine>
-            <valInt>2</valInt>
+            <valInt>8</valInt>
             <enumNames>Off</enumNames>
             <enumNames>White</enumNames>
             <enumNames>Red</enumNames>
             <enumNames>Green</enumNames>
             <enumNames>Blue</enumNames>
             <enumNames>Yellow</enumNames>
-            <enumNames>Teal</enumNames>
+            <enumNames>Cyan</enumNames>
             <enumNames>Purple</enumNames>
+            <enumNames>Orange</enumNames>
         </led_background_color>
         <float_version>
             <longName>Package Version</longName>
@@ -2447,6 +2471,7 @@ p, li { white-space: pre-wrap; }
         <ser>led_background_color</ser>
         <ser>float_version</ser>
         <ser>is_led_rgbw</ser>
+        <ser>led_brightness</ser>
     </SerOrder>
     <Grouping>
         <group>
@@ -2624,6 +2649,7 @@ p, li { white-space: pre-wrap; }
                 <subgroupParams>
                     <param>::sep::LED Settings</param>
                     <param>is_led_on</param>
+                    <param>led_brightness</param>
                     <param>led_fwd_color</param>
                     <param>led_back_color</param>
                     <param>led_charge_color</param>
