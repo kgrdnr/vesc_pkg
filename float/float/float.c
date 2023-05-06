@@ -2257,6 +2257,9 @@ static float app_float_get_debug(int index) {
 			return d->erpm > 0.0f;
 		case (28):
 			return d->float_conf.is_rg_swapped;
+		case(29):
+			return d->float_conf.is_led_rgbw;
+
 		default:
 			return 0;
 	}

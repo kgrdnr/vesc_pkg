@@ -116,6 +116,7 @@ int32_t confparser_serialize_float_config(uint8_t *buffer, const float_config *c
 	buffer[ind++] = conf->led_charge_color;
 	buffer[ind++] = conf->led_background_color;
 	buffer_append_float16(buffer, conf->float_version, 1000, &ind);
+	buffer[ind++] = conf->is_led_rgbw;
 
 	return ind;
 }
@@ -234,6 +235,7 @@ bool confparser_deserialize_float_config(const uint8_t *buffer, float_config *co
 	conf->led_charge_color = buffer[ind++];
 	conf->led_background_color = buffer[ind++];
 	conf->float_version = buffer_get_float16(buffer, 1000, &ind);
+	conf->is_led_rgbw = buffer[ind++];
 
 	return true;
 }
@@ -345,5 +347,6 @@ void confparser_set_defaults_float_config(float_config *conf) {
 	conf->led_charge_color = APPCONF_FLOAT_CHARGE_COLOR;
 	conf->led_background_color = APPCONF_FLOAT_BACKGROUND_COLOR;
 	conf->float_version = APPCONF_FLOAT_VERSION;
+	conf->is_led_rgbw = APPCONF_FLOAT_IS_LED_RGBW;
 }
 

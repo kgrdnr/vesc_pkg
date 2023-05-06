@@ -9,11 +9,12 @@
 (define is-rgswapped (ext-float-dbg 28))
 (def colors '(0x00000000i32 0xFFFFFFFFi32 0x00FF0000i32 0x0000FF00i32 0x000000FFi32 0x007F7F00i32 0x00007F7Fi32 0x004F00FFi32))
 (define leds-enabled (ext-float-dbg 18))
+(define is-rgbw (ext-float-dbg 29))
 
 (if (= leds-enabled 1) (let (
     (use-ch2 0) ; 0 means CH1
     (use-tim4 1) ; 0 means TIM3
-    (is-rgbw 0)) ; Some adressable LEDs have an extra white channel. Set this to 1 to use it
+    );(is-rgbw 0)) ; Some adressable LEDs have an extra white channel. Set this to 1 to use it
     ;(is-rgswapped 1)) ; 1 reverses order of red and green data
         (ext-ws2812-init led-num use-ch2 use-tim4 is-rgbw is-rgswapped)
 ))
@@ -44,6 +45,7 @@
             (define led-background-color (ext-float-dbg 25))
             (define switch-state (ext-float-dbg 26))
             (define forward-movement (ext-float-dbg 27))
+            
             (if (= leds-enabled 1)
             (if (= led-on 1)    
                 (if (> switch-state 0)

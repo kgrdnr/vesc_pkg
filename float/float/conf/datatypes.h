@@ -143,6 +143,7 @@ typedef struct {
 	float surge_angle;
 	bool is_led_enabled;
 	bool is_led_on;
+	bool is_led_rgbw;
 	uint16_t num_led_front;
 	uint16_t num_led_back;
 	FLOAT_LED_COLOR_TYPE led_fwd_color;

@@ -533,6 +533,11 @@
 #define APPCONF_FLOAT_VERSION 1.1
 #endif
 
+// Enable RGBW
+#ifndef APPCONF_FLOAT_IS_LED_RGBW
+#define APPCONF_FLOAT_IS_LED_RGBW 0
+#endif
+
 // CONF_DEFAULT_H_
 #endif
 
