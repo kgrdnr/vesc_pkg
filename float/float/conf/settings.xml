@@ -2148,6 +2148,162 @@ p, li { white-space: pre-wrap; }
             <cDefine>APPCONF_FLOAT_DISABLE</cDefine>
             <valInt>0</valInt>
         </float_disable>
+        <is_led_on>
+            <longName>Turn On LEDs</longName>
+            <type>5</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Turn on or off led strips&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_IS_LED_ON</cDefine>
+            <valInt>0</valInt>
+        </is_led_on>
+        <is_led_enabled>
+            <longName>Enable LED on Servo/PPM</longName>
+            <type>5</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enable/disable LEDs. LEDs are controlled by Servo/PPM. WS28xx required, PPM capacitor removed, 1k pullup to 5v. NOT combatible with buzzer or remote, disable both. May require reboot.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_IS_LED_ENABLED</cDefine>
+            <valInt>0</valInt>
+        </is_led_enabled>
+        <is_rg_swapped>
+            <longName>Swap Red and Green</longName>
+            <type>5</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If your colors are wrong enable this. Reboot to take effect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_IS_RG_SWAPPED</cDefine>
+            <valInt>0</valInt>
+        </is_rg_swapped>
+        <num_led_front>
+            <longName>Number of Front LEDs</longName>
+            <type>2</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Number of LEDs on front bumper. Battery level will be displayed here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_NUM_LED_FRONT</cDefine>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxInt>99</maxInt>
+            <minInt>0</minInt>
+            <showDisplay>0</showDisplay>
+            <stepInt>1</stepInt>
+            <valInt>10</valInt>
+            <suffix></suffix>
+            <vTx>3</vTx>
+        </num_led_front>
+        <num_led_back>
+            <longName>Number of back LEDs</longName>
+            <type>2</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Number of LEDs on rear bumper. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_NUM_LED_BACK</cDefine>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxInt>99</maxInt>
+            <minInt>0</minInt>
+            <showDisplay>0</showDisplay>
+            <stepInt>1</stepInt>
+            <valInt>10</valInt>
+            <suffix></suffix>
+            <vTx>3</vTx>
+        </num_led_back>
+        <led_fwd_color>
+            <longName>LED forward color</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color in direction of travel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_FORWARD_COLOR</cDefine>
+            <valInt>1</valInt>
+            <enumNames>Off</enumNames>
+            <enumNames>White</enumNames>
+            <enumNames>Red</enumNames>
+            <enumNames>Green</enumNames>
+            <enumNames>Blue</enumNames>
+            <enumNames>Yellow</enumNames>
+            <enumNames>Cyan</enumNames>
+            <enumNames>Purple</enumNames>
+        </led_fwd_color>
+        <led_back_color>
+            <longName>LED backward color</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color of tail&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_BACKWARD_COLOR</cDefine>
+            <valInt>2</valInt>
+            <enumNames>Off</enumNames>
+            <enumNames>White</enumNames>
+            <enumNames>Red</enumNames>
+            <enumNames>Green</enumNames>
+            <enumNames>Blue</enumNames>
+            <enumNames>Yellow</enumNames>
+            <enumNames>Cyan</enumNames>
+            <enumNames>Purple</enumNames>
+        </led_back_color>
+        <led_charge_color>
+            <longName>LED charge color</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color for amount of battery remaining. Displayed when board is stopped.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_CHARGE_COLOR</cDefine>
+            <valInt>3</valInt>
+            <enumNames>Off</enumNames>
+            <enumNames>White</enumNames>
+            <enumNames>Red</enumNames>
+            <enumNames>Green</enumNames>
+            <enumNames>Blue</enumNames>
+            <enumNames>Yellow</enumNames>
+            <enumNames>Cyan</enumNames>
+            <enumNames>Purple</enumNames>
+        </led_charge_color>
+        <led_background_color>
+            <longName>LED background color</longName>
+            <type>4</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;LED color for background. Displayed when board is stopped.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>APPCONF_FLOAT_BACKGROUND_COLOR</cDefine>
+            <valInt>2</valInt>
+            <enumNames>Off</enumNames>
+            <enumNames>White</enumNames>
+            <enumNames>Red</enumNames>
+            <enumNames>Green</enumNames>
+            <enumNames>Blue</enumNames>
+            <enumNames>Yellow</enumNames>
+            <enumNames>Teal</enumNames>
+            <enumNames>Purple</enumNames>
+        </led_background_color>
         <float_version>
             <longName>Package Version</longName>
             <type>1</type>
@@ -2268,6 +2424,15 @@ p, li { white-space: pre-wrap; }
         <ser>dark_pitch_offset</ser>
         <ser>is_buzzer_enabled</ser>
         <ser>float_disable</ser>
+        <ser>is_led_enabled</ser>
+        <ser>is_led_on</ser>
+        <ser>is_rg_swapped</ser>
+        <ser>num_led_front</ser>
+        <ser>num_led_back</ser>
+        <ser>led_fwd_color</ser>
+        <ser>led_back_color</ser>
+        <ser>led_charge_color</ser>
+        <ser>led_background_color</ser>
         <ser>float_version</ser>
     </SerOrder>
     <Grouping>
@@ -2439,6 +2604,22 @@ p, li { white-space: pre-wrap; }
                     <param>::sep::Miscellaneous</param>
                     <param>dark_pitch_offset</param>
                     <param>is_buzzer_enabled</param>
+                </subgroupParams>
+            </subgroup>
+            <subgroup>
+                <subgroupName>Lights</subgroupName>
+                <subgroupParams>
+                    <param>::sep::LED Settings</param>
+                    <param>is_led_on</param>
+                    <param>led_fwd_color</param>
+                    <param>led_back_color</param>
+                    <param>led_charge_color</param>
+                    <param>led_background_color</param>
+                    <param>::sep::WS2812 LED control</param>
+                    <param>is_led_enabled</param>
+                    <param>num_led_front</param>
+                    <param>num_led_back</param>
+                    <param>is_rg_swapped</param>
                 </subgroupParams>
             </subgroup>
         </group>
