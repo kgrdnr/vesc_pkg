@@ -2261,6 +2261,8 @@ static float app_float_get_debug(int index) {
 			return d->float_conf.is_led_rgbw;
 		case(30):
 			return d->float_conf.led_brightness;
+		case(31):
+			return d->float_conf.num_led_hud;
 
 		default:
 			return 0;

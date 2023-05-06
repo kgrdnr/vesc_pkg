@@ -543,6 +543,11 @@
 #define APPCONF_FLOAT_LED_BRIGHTNESS 100
 #endif
 
+// Number of HUD LEDs
+#ifndef APPCONF_FLOAT_NUM_LED_HUD
+#define APPCONF_FLOAT_NUM_LED_HUD 10
+#endif
+
 // CONF_DEFAULT_H_
 #endif
 
